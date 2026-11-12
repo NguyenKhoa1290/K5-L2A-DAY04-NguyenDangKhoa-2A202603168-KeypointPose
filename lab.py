@@ -269,6 +269,9 @@ def cmd_check(args, quiet=False):
         die("Không thấy CVAT trên máy (không có container cvat_server).",
             "CVAT của Ngày 2 đã bị xóa hoặc cài trên máy khác. Báo LC; cách cài lại ở docs/MAY_YEU.md mục 4.")
     cdir = compose_dir(d)
+    if cdir and os.name == "nt" and not d.wsl and not os.path.isdir(cdir):
+        warn(f"Không truy cập được thư mục Compose '{cdir}' từ Windows; bỏ qua sửa lâu dài và dùng sửa tạm.")
+        cdir = ""
     stopped = [n for n in CORE if cs.get(n) != "running"]
     if stopped:
         warn("Đang tắt: " + ", ".join(stopped) + " → bật lại...")

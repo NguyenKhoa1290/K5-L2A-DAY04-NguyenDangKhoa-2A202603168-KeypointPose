@@ -68,7 +68,7 @@ vmIdleTimeout=-1
 
 | Triệu chứng | Nguyên nhân | Cách xử lý |
 |---|---|---|
-| Trình duyệt đứng ở **"Connecting…"** lâu | Mạng trỏ tên `nuclio` (phần AI tự gán của CVAT, lab không dùng) ra ngoài, CVAT chờ 2 phút | `python lab.py check`: tự thêm `docker-compose.override.yml` trỏ `nuclio` về máy mình |
+| Trình duyệt đứng ở **"Connecting…"** lâu | Mạng trỏ tên `nuclio` (phần AI tự gán của CVAT, lab không dùng) ra ngoài, CVAT chờ 2 phút | `python lab.py check`: tự thêm `docker-compose.override.yml` trỏ `nuclio` về máy mình. Nếu thư mục Compose không truy cập được từ Windows, script sẽ báo và chỉ sửa tạm trong container; chạy lại sau khi CVAT khởi động lại |
 | Mọi thao tác báo lỗi **500** | Phần phân quyền (OPA) khởi động trước server | `python lab.py check`: tự khởi động lại `cvat_opa` |
 | Mở http://localhost:8080 không được | CVAT đang tắt (sau khi tắt máy / tắt Docker) | `python lab.py start` |
 | CVAT tự tắt giữa buổi (Windows + WSL) | WSL tắt khi rảnh | Mục 3: `wsl -e sleep infinity` |

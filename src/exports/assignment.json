@@ -1,0 +1,43 @@
+{
+ "mssv": "202603168",
+ "ten": "NguyenDangKhoa",
+ "pool_version": "d04-k5-v2",
+ "cvat_user": "nguyenkhoa",
+ "project": "d04-keypoint",
+ "persons": [
+  "000000103970.jpg",
+  "000000176000.jpg",
+  "000000205650.jpg",
+  "000000240340.jpg",
+  "000000433787.jpg",
+  "000000188804.jpg",
+  "000000360811.jpg",
+  "000000393909.jpg",
+  "000000307757.jpg",
+  "000000461002.jpg",
+  "000000100510.jpg",
+  "000000522889.jpg"
+ ],
+ "faces": [
+  "face_145751.jpg",
+  "face_232598.jpg",
+  "face_257657.jpg",
+  "face_137371.jpg",
+  "face_53580.jpg",
+  "face_249336.jpg",
+  "face_309728.jpg",
+  "face_560526.jpg"
+ ],
+ "tasks": {
+  "persons": {
+   "task_id": 10,
+   "job_id": 10,
+   "task_name": "persons-NguyenDangKhoa"
+  },
+  "faces": {
+   "task_id": 11,
+   "job_id": 11,
+   "task_name": "faces-NguyenDangKhoa"
+  }
+ }
+}
